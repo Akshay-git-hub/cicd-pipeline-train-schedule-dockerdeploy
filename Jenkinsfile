@@ -1,4 +1,4 @@
-    pipeline {
+pipeline {
         agent any
         stages {
             stage('Build') {
@@ -20,6 +20,7 @@
                         }
                     }
                 }
+            }
             stage('Push Docker Image') {
                 when {
                     branch 'master'
@@ -34,4 +35,4 @@
                 }
             }
         }   
-
+    }
